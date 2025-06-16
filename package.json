@@ -1,0 +1,27 @@
+{
+  "name": "react-autocomplete-form",
+  "bin": {
+    "add": "index.js"
+  },
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marceloakalopes/marceloakalopes-react-autocomplete-form.git"
+  },
+  "keywords": [],
+  "author": "Marcelo Lopes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marceloakalopes/marceloakalopes-react-autocomplete-form/issues"
+  },
+  "homepage": "https://github.com/marceloakalopes/marceloakalopes-react-autocomplete-form#readme",
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "typescript": "^5.8.3"
+  }
+}
