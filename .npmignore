@@ -1,0 +1,32 @@
+# Source
+src/
+
+# Development
+.git/
+.gitignore
+.DS_Store
+.env
+.env.*
+
+# Tests
+__tests__/
+*.test.*
+*.spec.*
+
+# Build tools
+tsconfig.json
+.eslintrc
+.eslintignore
+.prettierrc
+.prettierignore
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/ 

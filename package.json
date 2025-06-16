@@ -1,19 +1,27 @@
 {
   "name": "react-autocomplete-form",
-  "bin": {
-    "add": "index.js"
-  },
+  "bin": "./dist/index.js",
   "version": "0.0.1",
-  "description": "",
+  "description": "React autocomplete form integrated with google places api",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "dev": "tsc -w"
+    "dev": "tsc -w",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marceloakalopes/marceloakalopes-react-autocomplete-form.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "autocomplete",
+    "form",
+    "google-places",
+    "components",
+    "cli"
+  ],
   "author": "Marcelo Lopes",
   "license": "MIT",
   "bugs": {
@@ -23,5 +31,9 @@
   "devDependencies": {
     "@types/node": "^24.0.1",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0"
   }
 }
