@@ -82,7 +82,7 @@ export const LocationInput = React.forwardRef<
         clearTimeout(typingTimeout);
       }
     };
-  }, [state.location]);
+  }, [state.location, dispatch]);
 
   // Close suggestions when clicking outside
   useEffect(() => {

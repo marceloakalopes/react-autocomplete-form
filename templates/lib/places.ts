@@ -21,6 +21,11 @@ interface LocationBias {
   };
 }
 
+interface AddressComponent {
+  longText: string;
+  types: string[];
+}
+
 interface PlacesAutocompleteRequest {
   input: string;
   locationBias?: LocationBias;
@@ -122,19 +127,19 @@ export async function getPlaceDetails(placeId: string): Promise<AddressComponent
     const addressComponents = data.addressComponents || [];
 
     return {
-      streetNumber: addressComponents.find((component: any) =>
+      streetNumber: addressComponents.find((component: AddressComponent) =>
         component.types.includes("street_number")
       )?.longText || "",
-      street: addressComponents.find((component: any) =>
+      street: addressComponents.find((component: AddressComponent) =>
         component.types.includes("route")
       )?.longText || "",
-      city: addressComponents.find((component: any) =>
+      city: addressComponents.find((component: AddressComponent) =>
         component.types.includes("locality")
       )?.longText || "",
-      province: addressComponents.find((component: any) =>
+      province: addressComponents.find((component: AddressComponent) =>
         component.types.includes("administrative_area_level_1")
       )?.longText || "",
-      postalCode: addressComponents.find((component: any) =>
+      postalCode: addressComponents.find((component: AddressComponent) =>
         component.types.includes("postal_code")
       )?.longText || "",
     };

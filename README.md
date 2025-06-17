@@ -1,7 +1,4 @@
-<p align="center">
-  <i align="center">react-autocomplete-form</i>
-</p>
-
+# 🌎 react-autocomplete-form (v1.0.0)
 
 <div align="center">
   <img src="/demo/demo.gif" alt="Demo" />
@@ -195,6 +192,7 @@ Example of custom styling:
 - React 18 or higher
 - TypeScript 4.5 or higher
 - Google Places API key
+- Tailwind CSS
 
 ## Contributing
 

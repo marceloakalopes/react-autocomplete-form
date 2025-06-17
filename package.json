@@ -1,7 +1,7 @@
 {
   "name": "react-autocomplete-form",
   "bin": "./dist/index.js",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "React autocomplete form integrated with google places api",
   "main": "dist/index.js",
   "type": "module",

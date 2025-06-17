@@ -71,7 +71,7 @@ const installDependencies = async (projectRoot: string) => {
     "lucide-react@latest"
   ];
 
-  console.log(chalk.blue("\nInstalling required dependencies..."));
+  console.log(chalk.blue("\n🔄 Installing required dependencies..."));
   
   try {
     const { stdout, stderr } = await execAsync(`npm install ${dependencies.join(" ")}`, {
@@ -79,11 +79,11 @@ const installDependencies = async (projectRoot: string) => {
     });
     
     if (stderr && !stderr.includes("npm notice")) {
-      console.error(chalk.yellow("\nWarnings during installation:"));
+      console.error(chalk.yellow("\n⚠️ Warnings during installation:"));
       console.error(stderr);
     }
     
-    console.log(chalk.green("✔ Dependencies installed successfully!"));
+    console.log(chalk.green("✅ Dependencies installed successfully!"));
   } catch (error: any) {
     console.error(chalk.red("\n✖ Error installing dependencies:"), error.message);
     throw error;
@@ -104,7 +104,7 @@ program
       const projectRoot = getProjectRoot();
       await checkDependencies(projectRoot);
       
-      console.log(chalk.blue("\nInitializing react-autocomplete-form..."));
+      console.log(chalk.blue("\n 📦 Initializing react-autocomplete-form..."));
       
       // Install dependencies first
       await installDependencies(projectRoot);
@@ -116,34 +116,22 @@ program
       const targetContextDir = path.join(projectRoot, "context");
       
       // Copy all directories
-      console.log(chalk.blue("\nCopying components..."));
+      console.log(chalk.blue("\n 📂 Copying components..."));
       copyDirectory(path.join(templatesDir, "components"), targetComponentsDir);
       
-      console.log(chalk.blue("Copying utilities..."));
+      console.log(chalk.blue(" 📂 Copying utilities..."));
       copyDirectory(path.join(templatesDir, "lib"), targetLibDir);
       
-      console.log(chalk.blue("Copying context..."));
+      console.log(chalk.blue(" 📂 Copying context..."));
       copyDirectory(path.join(templatesDir, "context"), targetContextDir);
 
-      console.log(chalk.green("\n✔ Installation complete!"));
+      console.log(chalk.green("\n✅ Installation complete!"));
       console.log(chalk.blue("\nAvailable components:"));
       console.log("- AutocompleteForm");
       console.log("- LocationInput");
       console.log("- CityInput");
       console.log("- ProvinceStateInput");
       console.log("- PostalcodeInput");
-      
-      console.log(chalk.blue("\nUsage example:"));
-      console.log('import { AutocompleteForm } from "@/components/autocomplete-form";');
-      console.log("\nfunction MyComponent() {");
-      console.log("  return (");
-      console.log("    <AutocompleteForm");
-      console.log("      onSubmit={(data) => {");
-      console.log("        console.log(data);");
-      console.log("      }}");
-      console.log("    />");
-      console.log("  );");
-      console.log("}");
 
     } catch (error: any) {
       console.error(chalk.red("\n✖ Error:"), error.message);
