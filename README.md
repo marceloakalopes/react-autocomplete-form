@@ -1,4 +1,4 @@
-# 🌎 react-autocomplete-form (v1.0.0)
+# 🌎 react-autocomplete-form (v0.0.5)
 
 <div align="center">
   <img src="/demo/demo.gif" alt="Demo" />
